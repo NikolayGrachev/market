@@ -1,0 +1,39 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Market"
+include ':app'
+include ':core-utils'
+include ':core-database-api'
+include ':core-database-impl'
+include ':ui-feature-products-list-api'
+include ':ui-feature-products-list-impl'
+include ':ui-feature-pdp-api'
+include ':ui-feature-pdp-impl'
+include ':ui-feature-add-product-api'
+include ':ui-feature-add-product-impl'
+include ':core-resources'
+include ':core-network-api'
+include ':core-network-impl'
+include ':feature-product-api'
+include ':feature-product-impl'
+include ':feature-product-in-list-api'
+include ':feature-product-in-list-impl'
+include ':core-navigation-api'
+include ':core-navigation-impl'
+include ':feature_product_worker_impl'
+include ':feature_product_worker_api'
+include ':core-shared-preferences-impl'
+include ':feature-network-state-monitor-impl'
+include ':feature-network-state-monitor-api'

@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+apply from: "../dependencies.gradle"
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 31
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(":core-utils")
+    implementation project(":core-resources")
+    implementation project(":core-database-api")
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.google.dagger:dagger:2.42'
+    kapt 'com.google.dagger:dagger-compiler:2.42'
+
+    implementation coreKtx
+    implementation navigation.values()
+    implementation appCompat
+    implementation material
+    implementation constraintLayout
+    implementation viewModel
+    implementation lifecycle
+    implementation liveData
+    implementation glide
+    implementation dagger
+    implementation daggerCompiler
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation room.values()
+
+    annotationProcessor "androidx.room:room-compiler:${versions.room}"
+    kapt("androidx.room:room-compiler:${versions.room}")
+
+    testImplementation junit
+    androidTestImplementation androidTestJunit
+    androidTestImplementation espresso
+}

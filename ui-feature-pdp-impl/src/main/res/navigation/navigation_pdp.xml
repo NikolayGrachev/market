@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_pdp"
+    app:startDestination="@id/PDPFragment"
+    android:label="navigation_pdp">
+
+    <fragment
+        android:id="@+id/PDPFragment"
+        android:label="ru.grachev.market.ui_feature_pdp_impl.presentation.view.PDPFragment"
+        android:name="ru.grachev.market.ui_feature_pdp_impl.presentation.view.PDPFragment"
+        tools:layout="@layout/fragment_pdp">
+
+        <argument
+            android:name="product_id"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+
+        <deepLink
+            app:uri="@string/deep_link_fragment_pdp_fragment"/>
+
+    </fragment>
+
+</navigation>

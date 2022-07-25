@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/StartupFragment">
+
+    <fragment
+        android:id="@+id/StartupFragment"
+        android:name="ru.grachev.market.core_navigation_impl.view.StartupFragment"/>
+
+    <include app:graph="@navigation/navigation_products" />
+    <include app:graph="@navigation/navigation_add_product" />
+    <include app:graph="@navigation/navigation_pdp" />
+
+
+</navigation>

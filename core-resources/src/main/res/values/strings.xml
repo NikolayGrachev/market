@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Market</string>
+
+    <string name="error_add_product">Ошибка добавления продукта</string>
+    <string name="no_connection">Нет соединения</string>
+    <string name="to_cart">В корзину</string>
+    <string name="in_cart">В корзине</string>
+
+    <!-- Deep links -->
+    <string name="deep_link_fragment_products_list">market-app://dev.grachev.market/fragment_products</string>
+    <string name="deep_link_fragment_add_product">market-app://dev.grachev.market/fragment_add_product</string>
+    <string name="deep_link_fragment_pdp_fragment">market-app://dev.grachev.market/fragment_pdp/{product_id}</string>
+    <string name="deep_link_fragment_pdp_fragment_core">market-app://dev.grachev.market/fragment_pdp/</string>
+
+
+
+</resources>

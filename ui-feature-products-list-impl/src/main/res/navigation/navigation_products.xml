@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_products"
+    app:startDestination="@id/ProductsFragment"
+    android:label="navigation_products">
+
+    <fragment
+        android:id="@+id/ProductsFragment"
+        android:label="ru.grachev.market.ui_feature_products_list_impl.presentation.view.ProductsFragment"
+        android:name="ru.grachev.market.ui_feature_products_list_impl.presentation.view.ProductsFragment"
+        tools:layout="@layout/fragment_products">
+
+        <deepLink
+            app:uri="@string/deep_link_fragment_products_list"/>
+
+    </fragment>
+
+</navigation>
