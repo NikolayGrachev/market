@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         // test1
         // test2
+        // test5
+        // test6
         val j = CoroutineScope(Job()).launch {  }
 
     }
