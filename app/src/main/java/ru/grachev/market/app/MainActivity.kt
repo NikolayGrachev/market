@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         // test1
+        // test2
         val j = CoroutineScope(Job()).launch {  }
 
     }
