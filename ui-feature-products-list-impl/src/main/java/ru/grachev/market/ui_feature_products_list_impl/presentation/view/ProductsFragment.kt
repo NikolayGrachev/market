@@ -5,9 +5,13 @@ import android.view.View
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.sync.Mutex
+import ru.grachev.market.core_utils.delegate.BatteryMonitor
+import ru.grachev.market.core_utils.delegate.BatteryMonitorImpl
 import ru.grachev.market.core_utils.model.NetworkState
 import ru.grachev.market.core_utils.presentation.fragment.BaseFragment
 import ru.grachev.market.ui_feature_products_list_api.ProductsNavigationApi
+import ru.grachev.market.ui_feature_products_list_impl.R
 import ru.grachev.market.ui_feature_products_list_impl.databinding.FragmentProductsBinding
 import ru.grachev.market.ui_feature_products_list_impl.domain.model.ProductInListVO
 import ru.grachev.market.ui_feature_products_list_impl.presentation.view.rv.ListGenerator
@@ -16,15 +20,25 @@ import ru.grachev.market.ui_feature_products_list_impl.presentation.view_model.P
 import javax.inject.Inject
 
 
+
 class ProductsFragment @Inject constructor(
     private val  vm: ProductsViewModel,
     override val navigation: ProductsNavigationApi
-) : BaseFragment<FragmentProductsBinding>(FragmentProductsBinding::inflate) {
+): BaseFragment<FragmentProductsBinding>(FragmentProductsBinding::inflate),
+    BatteryMonitor by BatteryMonitorImpl() {
+
+    val l = mutableListOf<String>()
 
     override val networkState: LiveData<NetworkState> = vm.networkState
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val v: ViewModel = ViewModelProvider(this).get(ProductsViewModel::class.java)
+
+        observeBatteryChanges {
+
+        }
 
         vm.getProductsInList(viewLifecycleOwner)
 

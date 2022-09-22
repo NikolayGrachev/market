@@ -19,8 +19,8 @@ abstract class BaseViewModel: ViewModel() {
     fun observeNetworkState(networkStateFlow: Flow<NetworkState>) {
         viewModelScope.launch {
             networkStateFlow
-                ?.flowOn(Dispatchers.IO)
-                ?.onEach {
+                .flowOn(Dispatchers.IO)
+                .onEach {
                     _networkState.value = it
                 }
                 ?.flowOn(Dispatchers.Main)

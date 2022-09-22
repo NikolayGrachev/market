@@ -30,6 +30,7 @@ class ProductsViewModel @Inject constructor(
     }
 
     private fun startWorkerOnNetworkConnected(viewLifecycleOwner: LifecycleOwner) {
+
         networkState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 NetworkState.Connected -> {
