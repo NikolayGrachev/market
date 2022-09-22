@@ -16,11 +16,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        // test1
-        // test2
+        // sq1
+        // sq2
 
-        // test3
-        // test4
         val j = CoroutineScope(Job()).launch {  }
 
     }
