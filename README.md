@@ -3,11 +3,11 @@
 Стек
 
 - [ ] Dagger 2
-- [ ] Multi-modules
+- [ ] Multi api-impl modules 
 - [ ] Clean Architecture
-- [ ] Jetpack Navigation
-- [ ] MVVM для presentation-слоя
-- [ ] Kotlin Coroutines для реализации асинхронности
+- [ ] Jetpack Navigation with deep-links
+- [ ] MVVM for presentation layer
+- [ ] Work Manager and Kotlin Coroutines for async work
 
 Функционал приложения
 
