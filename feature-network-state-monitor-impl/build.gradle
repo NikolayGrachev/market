@@ -30,6 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'dev.grachev.ui_feature_network_state_monitor_impl'
 }
 
 dependencies {

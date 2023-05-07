@@ -34,6 +34,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'ru.grachev.market.ui_feature_products_list_impl'
 }
 
 dependencies {

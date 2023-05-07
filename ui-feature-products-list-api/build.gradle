@@ -30,6 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'ru.grachev.market.ui_feature_products_list_api'
 }
 
 dependencies {

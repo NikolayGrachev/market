@@ -33,6 +33,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'ru.grachev.market.ui_feature_add_product_impl'
 }
 
 dependencies {

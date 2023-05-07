@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Market</string>
 
-    <string name="error_add_product">Ошибка добавления продукта</string>
-    <string name="no_connection">Нет соединения</string>
-    <string name="to_cart">В корзину</string>
-    <string name="in_cart">В корзине</string>
+    <string name="error_add_product">Error adding product</string>
+    <string name="no_connection">No connection</string>
+    <string name="to_cart">Add to cart</string>
+    <string name="in_cart">In the cart</string>
 
     <!-- Deep links -->
     <string name="deep_link_fragment_products_list">market-app://dev.grachev.market/fragment_products</string>
