@@ -6,8 +6,6 @@
 - [ ] Jetpack Navigation with deep-links
 - [ ] MVVM for presentation layer
 - [ ] Work Manager and Kotlin Coroutines for async work
-- [ ] Retrofit to get products list with API
-- [ ] Room to store products and 
 
 Functionality
 
