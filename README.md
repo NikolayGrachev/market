@@ -15,6 +15,7 @@ Functionality
 - [ ] Details of the product
 - [ ] Add new product
 - [ ] Add to cart
+- [ ] Custom animated button
 
 Architecture
 
