@@ -1,31 +1,30 @@
-# Market
-
-Стек
+# "Online Shop": multi-module Android application
 
 - [ ] Dagger 2
-- [ ] Multi api-impl modules 
+- [ ] Multi api-impl Gradle modules 
 - [ ] Clean Architecture
 - [ ] Jetpack Navigation with deep-links
 - [ ] MVVM for presentation layer
 - [ ] Work Manager and Kotlin Coroutines for async work
+- [ ] Retrofit to get products list with API
+- [ ] Room to store products and 
 
-Функционал приложения
+Functionality
 
-- [ ] Просмотр списка товаров
-- [ ] Просмотр карточки товара
-- [ ] Создание нового товара
-- [ ] Кеширование товаров в базу данных Room
-- [ ] Счетчик просмотров карточки товара
+- [ ] List of products
+- [ ] Details of the product
+- [ ] Add new product
+- [ ] Add to cart
 
-Архитектура
+Architecture
 
-- [ ] Для разделения кода используются модули двух типов: module-api - для интерфейсов, module-impl - для реализаций
-- [ ] Фичи внутри разбиваются на слои в соответствии с принципами Clean Architecture: data, domain, presentation
-- [ ] Для предоставления зависимостей используется Dagger 2
-- [ ] В слое presentation используется MVVM
-- [ ] Deep links для навигации
+- [ ] Two types of modules are used: module-api - for interfaces, module-impl - for implementations
+- [ ] Features are divided into layers in accordance with the principles of Clean Architecture: data, domain, presentation
+- [ ] Dagger 2 used for dependencies injection
+- [ ] MVVM pattern used for presentation layer 
+- [ ] Navigation with deep links
 
-Схема модулей
+Scheme of modules
 
 - [ ] App
 - [ ] Core
@@ -35,9 +34,9 @@
     - [ ] Utils
     - [ ] Resources
 - [ ] Feature (no-UI modules)
-    - [ ] 1. Product (api + impl) (подробное описание товара)
-    - [ ] 2. Product-In-List (api + impl) (товар из списка)
-- [ ] UI-Feature (зависят от Feature )
+    - [ ] 1. Product (api + impl) (product description)
+    - [ ] 2. Product-In-List (api + impl) (list item)
+- [ ] UI-Feature (depends on Feature-modules )
     - [ ] Products list (api + impl) (depends on 2 feature)
     - [ ] PDP (api + impl) (depends on 1 feature)
     - [ ] Add product (api + impl) (depends on 1 and 2 features)
