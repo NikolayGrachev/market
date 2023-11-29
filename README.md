@@ -1,4 +1,4 @@
-# "Online Shop": multi-module Android application
+# "Online market": multi-module Android application
 
 - [ ] Dagger 2
 - [ ] Multi api-impl Gradle modules 
